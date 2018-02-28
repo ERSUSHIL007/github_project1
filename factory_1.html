@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>factory_Services</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script>
+        var app = angular.module("myApp", []);
+        app.factory("factoryService_1", function() {
+
+            var fact_obj1 = {};
+
+            fact_obj1.greet1 = function() {
+                return "Hello ! from greet1."
+            };
+
+            fact_obj1.greet2 = function() {
+                return "Hello ! from greet2."
+            };
+        });
+
+        app.controller("factoryController", function($scope, factoryService_1) {
+            $scope.factory_1 = function() {
+                alert(fact_obj1.greet1());
+                alert(fact_obj1.greet1());
+            };
+        });
+    </script>
+</head>
+
+<body ng-app="myApp" ng-controller="factoryController">
+
+    <div>
+        <h1>Working on factory_Services in AngularJs</h1>
+    </div> <br> <br>
+    <button ng-click="factory_1">GetInfo</button>
+
+</body>
+
+</html>
