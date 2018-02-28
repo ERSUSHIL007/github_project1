@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title> NgClass </title>
+        <style>
+            .c1
+            {
+                color:white;
+                background-color:lightblue;
+                padding:20px;
+                font-family:"Courier New";
+            }
+            .c2 
+            {
+                background-color:coral;
+                padding:40px;
+                font-family:Verdana;
+            }
+    </style>
+</head>
+    <body ng-app="">
+    
+    Choose a class:   
+    <select ng-model="home">
+    <option value="c1"> LightBlue </option>
+    <option value="c2"> Coral </option>
+    <option value="White"> Default </option>
+    </select>
+    
+    <div ng-class="home">
+      <h1>Welcome Home!</h1>
+      <p>I like it!</p>
+    </div>
+    <script src="angular.js"> </script>
+</body>
+</html>
+    
